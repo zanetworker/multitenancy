@@ -69,7 +69,7 @@ export function TenantOverview() {
   }
 
   return (
-    <div className="p-8 animate-fade-in max-w-5xl">
+    <div className="p-8 animate-fade-in">
       {/* Back + header */}
       <button
         onClick={() => navigate('/')}
