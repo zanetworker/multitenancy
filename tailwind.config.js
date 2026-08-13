@@ -4,38 +4,49 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+        sans:    ['"Red Hat Text"', 'ui-sans-serif', 'system-ui'],
+        display: ['"Red Hat Display"', 'ui-sans-serif', 'system-ui'],
+        mono:    ['"Red Hat Mono"', 'ui-monospace', 'monospace'],
       },
       colors: {
         surface: {
-          950: '#080810',
-          900: '#0E0E1A',
-          800: '#14142A',
-          700: '#1C1C38',
-          600: '#242445',
+          950: '#060608',
+          900: '#0D0D12',
+          800: '#13131A',
+          700: '#1A1A24',
+          600: '#22222E',
         },
-        border: '#252540',
-        'border-subtle': '#1C1C32',
+        border:         '#252530',
+        'border-subtle':'#1C1C26',
+        // Red Hat Red as primary
         primary: {
-          DEFAULT: '#6B8AFE',
-          hover: '#5070FE',
-          dim: 'rgba(107,138,254,0.12)',
+          DEFAULT: '#EE0000',
+          hover:   '#CC0000',
+          dark:    '#A60000',
+          dim:     'rgba(238,0,0,0.10)',
         },
+        // Red Hat teal accent
         teal: {
-          DEFAULT: '#2DD4BF',
-          dim: 'rgba(45,212,191,0.12)',
+          DEFAULT: '#009596',
+          light:   '#73BCB6',
+          dim:     'rgba(0,149,150,0.12)',
+        },
+        // Red Hat purple accent
+        purple: {
+          DEFAULT: '#5752D1',
+          dim:     'rgba(87,82,209,0.12)',
         },
         orange: {
-          DEFAULT: '#FB923C',
-          dim: 'rgba(251,146,60,0.12)',
+          DEFAULT: '#F4860A',
+          dim:     'rgba(244,134,10,0.12)',
         },
         rose: {
-          DEFAULT: '#F87171',
-          dim: 'rgba(248,113,113,0.12)',
+          DEFAULT: '#C9190B',
+          dim:     'rgba(201,25,11,0.12)',
         },
         violet: {
-          DEFAULT: '#A78BFA',
-          dim: 'rgba(167,139,250,0.12)',
+          DEFAULT: '#5752D1',
+          dim:     'rgba(87,82,209,0.12)',
         },
       },
     },

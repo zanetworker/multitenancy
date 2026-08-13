@@ -1,5 +1,5 @@
 import { NavLink, useNavigate } from 'react-router-dom'
-import { Cpu, LayoutDashboard, PlusCircle, ChevronDown, Building2, Globe, Server } from 'lucide-react'
+import { LayoutDashboard, PlusCircle, ChevronDown, Building2, Globe, Server } from 'lucide-react'
 import { useApp } from '../context/AppContext'
 import type { Role, UseCase } from '../types'
 
@@ -99,12 +99,16 @@ export function Sidebar() {
       {/* Logo */}
       <div className="px-5 py-4 border-b border-border">
         <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg bg-primary-dim border border-primary/30 flex items-center justify-center flex-shrink-0">
-            <Cpu className="w-4 h-4 text-primary" />
-          </div>
+          {/* Red Hat hat SVG mark */}
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" className="flex-shrink-0">
+            <rect width="28" height="28" rx="6" fill="#EE0000"/>
+            {/* Simplified hat shape */}
+            <path d="M7 17.5 C7 17.5 9.5 14 14 14 C18.5 14 21 17.5 21 17.5 L19.5 18.5 C19.5 18.5 18 16 14 16 C10 16 8.5 18.5 8.5 18.5 Z" fill="white"/>
+            <ellipse cx="14" cy="13" rx="5" ry="3" fill="white"/>
+          </svg>
           <div>
-            <div className="text-sm font-semibold text-slate-100 leading-tight">GPU Tenant</div>
-            <div className="text-xs text-slate-500 leading-tight">Platform</div>
+            <div className="text-sm font-bold text-white leading-tight" style={{fontFamily:'Red Hat Display,sans-serif'}}>GPU Tenant</div>
+            <div className="text-[10px] text-red-300 leading-tight tracking-wide">Red Hat · Platform</div>
           </div>
         </div>
       </div>
