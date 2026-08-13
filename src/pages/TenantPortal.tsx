@@ -94,7 +94,7 @@ export function TenantPortal() {
               Tenant User
             </span>
           </div>
-          <p className="text-sm text-slate-500 mt-0.5">Self-service resource catalog and quota overview</p>
+          <p className="text-sm text-slate-500 mt-0.5">Request AI workloads and see what your quota covers</p>
         </div>
       </div>
 
@@ -103,7 +103,7 @@ export function TenantPortal() {
           {/* Catalog */}
           <div>
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-base font-semibold text-slate-200">Resource Catalog</h2>
+              <h2 className="text-base font-semibold text-slate-200">Available Workloads</h2>
               <span className="text-xs text-slate-500">{availableCatalog.length} available</span>
             </div>
             <div className="grid grid-cols-2 xl:grid-cols-3 gap-4">
@@ -142,7 +142,7 @@ export function TenantPortal() {
                 <QuotaBar
                   used={tenant.gpuUsed}
                   total={tenant.gpuQuota}
-                  label="GPU"
+                  label="Training capacity"
                   unit=" GPUs"
                   color="primary"
                 />
