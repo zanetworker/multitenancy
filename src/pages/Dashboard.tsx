@@ -89,14 +89,18 @@ export function Dashboard() {
             {tenants.map(tenant => {
               const gpuPct = tenant.gpuQuota > 0 ? (tenant.gpuUsed / tenant.gpuQuota) * 100 : 0
               return (
-                <tr key={tenant.id} className="hover:bg-surface-700/50 transition-colors duration-100 group">
+                <tr
+                  key={tenant.id}
+                  className="hover:bg-surface-700/50 transition-colors duration-100 group cursor-pointer"
+                  onClick={() => navigate(`/tenant/${tenant.id}`)}
+                >
                   <td className="px-6 py-4">
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 rounded-lg bg-surface-700 border border-border flex items-center justify-center text-xs font-bold text-slate-400">
                         {tenant.name.slice(0, 2).toUpperCase()}
                       </div>
                       <div>
-                        <div className="text-sm font-medium text-slate-200">{tenant.name}</div>
+                        <div className="text-sm font-medium text-slate-200 group-hover:text-primary transition-colors">{tenant.name}</div>
                         <div className="text-xs text-slate-500">{tenant.members} member{tenant.members !== 1 ? 's' : ''} · {tenant.idp}</div>
                       </div>
                     </div>
@@ -131,7 +135,7 @@ export function Dashboard() {
                   <td className="px-4 py-4">
                     <OrgTypeBadge type={tenant.orgType} />
                   </td>
-                  <td className="px-6 py-4">
+                  <td className="px-6 py-4" onClick={e => e.stopPropagation()}>
                     <div className="flex items-center justify-end gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-150">
                       <Button
                         variant="ghost"
