@@ -9,7 +9,7 @@ import { TenantAdmin } from './pages/TenantAdmin'
 export default function App() {
   return (
     <AppProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/multitenancy/">
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<Dashboard />} />
